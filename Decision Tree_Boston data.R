@@ -32,10 +32,7 @@ print(model_performance)
 rules <- rpart.rules(tree_fit$fit)
 print(rules)
 
-
-#extra
-plot(data)
-
+#plotting decision tree and variable of importance
 rpart.plot(tree_fit$fit, type = 4, extra = 101, under = TRUE, cex = 0.8, 
            box.palette = "auto")
 
