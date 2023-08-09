@@ -55,14 +55,6 @@ for (i in k_values){
   bal_acc_setosa[i]<-cm_predictions[[i]]$byClass[1,11]
 }
 
-#checking accuracy plots
-plot(sens_setosa)
-plot(spec_setosa)
-plot(pos_pred_setosa)
-plot(neg_pred_setosa)
-plot(bal_acc_setosa)
-plot(accuracy)
-
 #checking structure of CM lists
 str(cm_predictions)
 
@@ -155,11 +147,4 @@ fig<- ggarrange(ovr_model,setosa,vers,vrg,
                 ncol = 2, nrow=2)
 
 fig
-#replacing "zero values"  in the vector with actual values
-###for (i in k_values){
-## accuracy[i]<-cm_predictions[[i]]$overall['Accuracy']
-##sens[i]<-cm_predictions[[i]]$byClass['Sensitivity']["Class: setosa"]
-##spec[i]<-cm_predictions[[i]]$byClass['Specificity']["setosa"]
-##pos_pred[i]<-cm_predictions[[i]]$byClass['Pos Pred Value']["setosa"]
-##neg_pred[i]<-cm_predictions[[i]]$byClass['Neg Pred Value']["setosa"]
-##bal_acc[i]<-cm_predictions[[i]]$byClass['Balanced Accuracy']["setosa"]}
+
